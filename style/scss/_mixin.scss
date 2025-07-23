@@ -1,0 +1,29 @@
+%progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, var(--primary), var(--light));
+  height: 5px;
+  border-radius: 3px;
+}
+
+%dot {
+    position: absolute;
+    background: var(--dark);
+    width: 10px;
+    height: 10px;
+    top: calc( -1 * calc(10px / 4));
+    transform: rotate(-45deg);
+}
+
+@mixin skill-bar-content($name, $size) {
+  &-progress-#{$name} {
+    @extend %progress;
+    width: $size;
+  }
+
+  &-dot-#{$name} {
+    @extend %dot;
+    left: calc($size - 10px);
+  }
+}

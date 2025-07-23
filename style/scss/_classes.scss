@@ -1,11 +1,34 @@
-%title {
-  text-transform: uppercase;
+@use 'mixin' as m;
+
+.bar-skill {
+  margin: 2rem 0;
+  height: 5px;
+  background: var(--faint);
+  border-radius: 3px;
+  position: relative;
+  @include m.skill-bar-content(html, 80%);
+  @include m.skill-bar-content(scss, 70%);
+  @include m.skill-bar-content(javascript, 50%);
+
 }
 
-.title {
-  &-small {
-    @extend %title;
-    letter-spacing: 0.5rem;
-    font-size: 1.7rem;
-  }
+.stars-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1.5rem 0 2.5rem 0;
+    color: var(--faint);
+    i {
+        font-size: 2rem;
+        margin: 0 1rem;
+    }
+
+    &-two-half {
+        margin: 0 1rem;
+        i:first-child {
+            margin: 0 -1.34rem 0 0;
+        }
+        i:last-child {
+            margin: 0 0 0 -1.34rem;
+        }
+    }
 }
