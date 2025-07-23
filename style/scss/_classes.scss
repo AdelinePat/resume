@@ -1,0 +1,11 @@
+%title {
+  text-transform: uppercase;
+}
+
+.title {
+  &-small {
+    @extend %title;
+    letter-spacing: 0.5rem;
+    font-size: 1.7rem;
+  }
+}
