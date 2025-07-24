@@ -208,7 +208,7 @@ img {
 
 .grid-container {
   display: grid;
-  grid: "picture header" auto "aside main" 1fr/350px auto;
+  grid: "picture header" auto "aside main" 1fr "aside footer" auto/350px auto;
 }
 
 header {
@@ -240,7 +240,6 @@ header p {
   border-right: 1px solid var(--faint);
   align-self: center;
   overflow: hidden;
-  /* background: grey; */
 }
 .picture img {
   height: 275px;
@@ -279,6 +278,62 @@ main h2 {
 main p {
   letter-spacing: 0.2rem;
   line-height: 3rem;
+}
+
+footer {
+  grid-area: footer;
+  padding: 5rem;
+  background: var(--text);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+footer h2 {
+  margin-bottom: 3rem;
+}
+footer form {
+  display: flex;
+  align-items: center;
+}
+footer form i {
+  background: blue;
+}
+footer form .prefix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+footer form input {
+  outline: 0;
+  padding: 1rem 2rem;
+  min-width: 400px;
+  border: 0;
+  line-height: 2rem;
+}
+footer form input::placeholder {
+  color: var(--text);
+}
+footer form button {
+  background: var(--text);
+  border: 0;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s;
+}
+footer form button:hover {
+  opacity: 0.8;
+}
+footer form button .postfix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

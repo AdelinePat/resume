@@ -1,5 +1,5 @@
-@use 'variables' as v;
-@use 'mixin' as m;
+@use "variables" as v;
+@use "mixin" as m;
 
 .bar-skill {
   margin: 2rem 0;
@@ -13,74 +13,73 @@
 }
 
 .stars-container {
-    display: flex;
-    justify-content: flex-start;
-    margin: 1.5rem 0 2.5rem 0;
-    color: var(--faint);
-    i {
-        font-size: 2rem;
-        margin: 0 1rem;
-    }
+  display: flex;
+  justify-content: flex-start;
+  margin: 1.5rem 0 2.5rem 0;
+  color: var(--faint);
+  i {
+    font-size: 2rem;
+    margin: 0 1rem;
+  }
 
-    &-two-half {
-        margin: 0 1rem;
-        i:first-child {
-            margin: 0 -1.34rem 0 0;
-        }
-        i:last-child {
-            margin: 0 0 0 -1.34rem;
-        }
+  &-two-half {
+    margin: 0 1rem;
+    i:first-child {
+      margin: 0 -1.34rem 0 0;
     }
+    i:last-child {
+      margin: 0 0 0 -1.34rem;
+    }
+  }
 }
 
 .social-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 2rem 0;
-    i {
-        flex-basis: 50px;
-        font-size: 2rem;
-        margin-right: 1rem;
-    }
-    p {
-        flex: auto;
-        margin: 0;
-    }
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 0;
+  i {
+    flex-basis: 50px;
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  p {
+    flex: auto;
+    margin: 0;
+  }
 }
 
 .experience {
-    display: flex;
-    margin: 3rem 0;
-    p {
-        margin: 0.2rem;
-    }
-
+  display: flex;
+  margin: 3rem 0;
+  p {
+    margin: 0.2rem;
+  }
 }
 
 .timeline {
-    text-align: center;
-    padding-right: 2rem;
-    border-right: 1px solid var(--faint);
+  text-align: center;
+  padding-right: 2rem;
+  border-right: 1px solid var(--faint);
 }
 
 .content {
-    padding: 0 1rem;
+  padding: 0 1rem;
 
-    h2 {
-        margin: 0;
-    }
+  h2 {
+    margin: 0;
+  }
 
-    p  {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
-    ul {
-        margin: 2rem 0;
-        list-style: circle;
-        padding-left: 2rem;
-        li {
-            padding-bottom: 1rem;
-        }
+  ul {
+    margin: 2rem 0;
+    list-style: circle;
+    padding-left: 2rem;
+    li {
+      padding-bottom: 1rem;
     }
+  }
 }

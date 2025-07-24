@@ -1,19 +1,17 @@
-@use 'variables';
+@use "variables";
 @use "reset";
 @use "base";
-@use 'generic';
+@use "generic";
 @use "classes";
-// @use "variables" as *;
+@use "mixin" as m;
 
 .grid-container {
   display: grid;
-  // grid-template-areas:
   grid:
     "picture header" auto
     "aside main" 1fr
+    "aside footer" auto
     / 350px auto;
-//   min-height: 100vh;
-  // align-content: stretch;
 }
 
 header {
@@ -22,8 +20,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // min-height: 30rem;
-  // background: var(--primary);
   background: linear-gradient(to right, var(--primary), var(--light));
   padding: 8rem 5rem;
   text-align: center;
@@ -55,7 +51,6 @@ header {
     object-fit: cover;
     filter: grayscale(1) brightness(120%) contrast(110%);
   }
-  /* background: grey; */
 }
 
 aside {
@@ -74,7 +69,7 @@ aside {
   }
 
   p {
-    margin:0;
+    margin: 0;
     margin-bottom: 2rem;
     font-style: italic;
   }
@@ -89,5 +84,58 @@ main {
   p {
     letter-spacing: 0.2rem;
     line-height: 3rem;
+  }
+}
+
+footer {
+  grid-area: footer;
+  padding: 5rem;
+  background: var(--text);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    i {
+      background: blue;
+    }
+
+    .prefix {
+      @include m.pre-post-fix(left);
+    }
+
+    input {
+      outline: 0;
+      padding: 1rem 2rem;
+      min-width: 400px;
+      border: 0;
+      line-height: 2rem;
+      &::placeholder {
+        color: var(--text);
+      }
+    }
+
+    button {
+      background: var(--text);
+      border: 0;
+      cursor: pointer;
+      color: white;
+      transition: all 0.2s;
+      &:hover {
+        opacity: 0.8;
+      }
+      .postfix {
+        @include m.pre-post-fix(right);
+      }
+    }
   }
 }

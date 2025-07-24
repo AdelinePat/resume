@@ -8,12 +8,12 @@
 }
 
 %dot {
-    position: absolute;
-    background: var(--dark);
-    width: 10px;
-    height: 10px;
-    top: calc( -1 * calc(10px / 4));
-    transform: rotate(-45deg);
+  position: absolute;
+  background: var(--dark);
+  width: 10px;
+  height: 10px;
+  top: calc(-1 * calc(10px / 4));
+  transform: rotate(-45deg);
 }
 
 @mixin skill-bar-content($name, $size) {
@@ -26,4 +26,12 @@
     @extend %dot;
     left: calc($size - 10px);
   }
+}
+
+@mixin pre-post-fix($position) {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-top-#{$position}-radius: 0.5rem;
+  border-bottom-#{$position}-radius: 0.5rem;
 }
