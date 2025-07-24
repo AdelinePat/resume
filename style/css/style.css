@@ -62,7 +62,15 @@ img {
   color: var(--hint);
 }
 
-.bar-skill-progress-html, .bar-skill-progress-scss, .bar-skill-progress-javascript {
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+.bar-skill-progress-html, .bar-skill-progress-scss, .bar-skill-progress-javascript, .bar-skill-progress-cpp, .bar-skill-progress-python, .bar-skill-progress-docker, .bar-skill-progress-java {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,7 +79,7 @@ img {
   border-radius: 3px;
 }
 
-.bar-skill-dot-html, .bar-skill-dot-scss, .bar-skill-dot-javascript {
+.bar-skill-dot-html, .bar-skill-dot-scss, .bar-skill-dot-javascript, .bar-skill-dot-cpp, .bar-skill-dot-python, .bar-skill-dot-docker, .bar-skill-dot-java {
   position: absolute;
   background: var(--dark);
   width: 10px;
@@ -88,22 +96,46 @@ img {
   position: relative;
 }
 .bar-skill-progress-html {
-  width: 80%;
+  width: 90%;
 }
 .bar-skill-dot-html {
-  left: calc(80% - 10px);
+  left: calc(90% - 10px);
 }
 .bar-skill-progress-scss {
-  width: 70%;
+  width: 80%;
 }
 .bar-skill-dot-scss {
-  left: calc(70% - 10px);
+  left: calc(80% - 10px);
 }
 .bar-skill-progress-javascript {
   width: 50%;
 }
 .bar-skill-dot-javascript {
   left: calc(50% - 10px);
+}
+.bar-skill-progress-cpp {
+  width: 60%;
+}
+.bar-skill-dot-cpp {
+  left: calc(60% - 10px);
+}
+.bar-skill-progress-python {
+  width: 85%;
+}
+.bar-skill-dot-python {
+  left: calc(85% - 10px);
+}
+.bar-skill-progress-docker {
+  width: 40%;
+}
+.bar-skill-dot-docker {
+  left: calc(40% - 10px);
+}
+.bar-skill-progress-java {
+  width: 45%;
+}
+.bar-skill-dot-java {
+  left: calc(45% - 10px);
 }
 
 .stars-container {
@@ -124,6 +156,54 @@ img {
 }
 .stars-container-two-half i:last-child {
   margin: 0 0 0 -1.34rem;
+}
+
+.social-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 0;
+}
+.social-container i {
+  flex-basis: 50px;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.social-container p {
+  flex: auto;
+  margin: 0;
+}
+
+.experience {
+  display: flex;
+  margin: 3rem 0;
+}
+.experience p {
+  margin: 0.2rem;
+}
+
+.timeline {
+  text-align: center;
+  padding-right: 2rem;
+  border-right: 1px solid var(--faint);
+}
+
+.content {
+  padding: 0 1rem;
+}
+.content h2 {
+  margin: 0;
+}
+.content p {
+  margin: 0;
+}
+.content ul {
+  margin: 2rem 0;
+  list-style: circle;
+  padding-left: 2rem;
+}
+.content ul li {
+  padding-bottom: 1rem;
 }
 
 .grid-container {
@@ -191,7 +271,14 @@ aside p {
 
 main {
   grid-area: main;
-  /* background: red; */
+  padding: 5rem;
+}
+main h2 {
+  margin-bottom: 4rem;
+}
+main p {
+  letter-spacing: 0.2rem;
+  line-height: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

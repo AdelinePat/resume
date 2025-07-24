@@ -1,3 +1,4 @@
+@use 'variables' as v;
 @use 'mixin' as m;
 
 .bar-skill {
@@ -6,10 +7,9 @@
   background: var(--faint);
   border-radius: 3px;
   position: relative;
-  @include m.skill-bar-content(html, 80%);
-  @include m.skill-bar-content(scss, 70%);
-  @include m.skill-bar-content(javascript, 50%);
-
+  @each $skill, $percent in v.$skills {
+    @include m.skill-bar-content($skill, $percent);
+  }
 }
 
 .stars-container {
@@ -29,6 +29,58 @@
         }
         i:last-child {
             margin: 0 0 0 -1.34rem;
+        }
+    }
+}
+
+.social-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0;
+    i {
+        flex-basis: 50px;
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+    p {
+        flex: auto;
+        margin: 0;
+    }
+}
+
+.experience {
+    display: flex;
+    margin: 3rem 0;
+    p {
+        margin: 0.2rem;
+    }
+
+}
+
+.timeline {
+    text-align: center;
+    padding-right: 2rem;
+    border-right: 1px solid var(--faint);
+}
+
+.content {
+    padding: 0 1rem;
+
+    h2 {
+        margin: 0;
+    }
+
+    p  {
+        margin: 0;
+    }
+
+    ul {
+        margin: 2rem 0;
+        list-style: circle;
+        padding-left: 2rem;
+        li {
+            padding-bottom: 1rem;
         }
     }
 }
