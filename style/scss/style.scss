@@ -13,7 +13,7 @@
     "picture header" auto
     "aside main" 1fr
     "aside footer" auto
-    / 350px auto;
+    / 35rem auto;
   @include mq.s {
     grid:
     "header" auto
@@ -72,8 +72,8 @@ header {
   overflow: hidden;
   img {
     margin: auto;
-    height: 275px;
-    width: 350px;
+    height: 27.5rem;
+    width: 35rem;
     border-radius: 50%;
     object-fit: cover;
     filter: grayscale(1) brightness(120%) contrast(110%);

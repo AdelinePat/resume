@@ -244,7 +244,7 @@ img {
 /* Large desktop */
 .grid-container {
   display: grid;
-  grid: "picture header" auto "aside main" 1fr "aside footer" auto/350px auto;
+  grid: "picture header" auto "aside main" 1fr "aside footer" auto/35rem auto;
 }
 @media only screen and (max-width: 767px) {
   .grid-container {
@@ -298,8 +298,8 @@ header p {
 }
 .picture img {
   margin: auto;
-  height: 275px;
-  width: 350px;
+  height: 27.5rem;
+  width: 35rem;
   border-radius: 50%;
   object-fit: cover;
   filter: grayscale(1) brightness(120%) contrast(110%);
