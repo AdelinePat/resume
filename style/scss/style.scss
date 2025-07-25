@@ -5,6 +5,7 @@
 @use "classes";
 @use "mixin" as m;
 @use "animations" as *;
+@use "media-queries" as mq;
 
 .grid-container {
   display: grid;
@@ -13,6 +14,16 @@
     "aside main" 1fr
     "aside footer" auto
     / 350px auto;
+  @include mq.s {
+    grid:
+    "header" auto
+    "main" auto
+    "picture" auto
+    "aside" auto
+    "footer" auto
+    / auto;
+  }
+
 }
 
 header {
@@ -20,16 +31,24 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   background: linear-gradient(to right, var(--primary), var(--light));
-  padding: 8rem 5rem;
   text-align: center;
   color: white;
+  padding: 8rem 5rem;
+  @include mq.s {
+    padding: 5rem 2rem;
+  }
   h1 {
     font-size: 6rem;
     line-height: 8rem;
     font-weight: 300;
     letter-spacing: 3rem;
+    @include mq.s {
+      font-size: 4rem;
+      letter-spacing: 1.5rem;
+      // word-break: word;
+    }
 
     span {
       display: inline-block;
@@ -46,16 +65,22 @@ header {
 .picture {
   grid-area: picture;
   padding: 4rem;
+  display: flex;
   background: var(--background);
   border-right: 1px solid var(--faint);
-  align-self: center;
+  // align-self: center;
   overflow: hidden;
   img {
+    margin: auto;
     height: 275px;
     width: 350px;
     border-radius: 50%;
     object-fit: cover;
     filter: grayscale(1) brightness(120%) contrast(110%);
+    @include mq.s {
+      height: 275px;
+      width: 275px;
+    }
   }
 }
 
@@ -64,6 +89,9 @@ aside {
   background: var(--background);
   border-right: 1px solid var(--faint);
   padding: 5rem;
+  @include mq.s {
+    padding: 5rem 3rem;
+  }
 
   .block {
     margin-bottom: 5rem;
@@ -84,6 +112,9 @@ aside {
 main {
   grid-area: main;
   padding: 5rem;
+  @include mq.s {
+    padding: 5rem 1.5rem;
+  }
   h2 {
     margin-bottom: 4rem;
   }
@@ -103,6 +134,9 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  @include mq.s {
+    padding: 5rem 1.5rem;
+  }
 
   h2 {
     margin-bottom: 3rem;
@@ -127,6 +161,9 @@ footer {
       line-height: 2rem;
       &::placeholder {
         color: var(--text);
+      }
+      @include mq.s {
+        min-width: 200px;
       }
     }
 

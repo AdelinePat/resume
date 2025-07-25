@@ -238,9 +238,18 @@ img {
     transform: rotate(0deg);
   }
 }
+/* Landscape phones and down 480*/
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
 .grid-container {
   display: grid;
   grid: "picture header" auto "aside main" 1fr "aside footer" auto/350px auto;
+}
+@media only screen and (max-width: 767px) {
+  .grid-container {
+    grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto/auto;
+  }
 }
 
 header {
@@ -248,17 +257,27 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   background: linear-gradient(to right, var(--primary), var(--light));
-  padding: 8rem 5rem;
   text-align: center;
   color: white;
+  padding: 8rem 5rem;
+}
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 5rem 2rem;
+  }
 }
 header h1 {
   font-size: 6rem;
   line-height: 8rem;
   font-weight: 300;
   letter-spacing: 3rem;
+}
+@media only screen and (max-width: 767px) {
+  header h1 {
+    font-size: 4rem;
+    letter-spacing: 1.5rem;
+  }
 }
 header h1 span {
   display: inline-block;
@@ -272,17 +291,24 @@ header p {
 .picture {
   grid-area: picture;
   padding: 4rem;
+  display: flex;
   background: var(--background);
   border-right: 1px solid var(--faint);
-  align-self: center;
   overflow: hidden;
 }
 .picture img {
+  margin: auto;
   height: 275px;
   width: 350px;
   border-radius: 50%;
   object-fit: cover;
   filter: grayscale(1) brightness(120%) contrast(110%);
+}
+@media only screen and (max-width: 767px) {
+  .picture img {
+    height: 275px;
+    width: 275px;
+  }
 }
 
 aside {
@@ -290,6 +316,11 @@ aside {
   background: var(--background);
   border-right: 1px solid var(--faint);
   padding: 5rem;
+}
+@media only screen and (max-width: 767px) {
+  aside {
+    padding: 5rem 3rem;
+  }
 }
 aside .block {
   margin-bottom: 5rem;
@@ -307,6 +338,11 @@ aside p {
 main {
   grid-area: main;
   padding: 5rem;
+}
+@media only screen and (max-width: 767px) {
+  main {
+    padding: 5rem 1.5rem;
+  }
 }
 main h2 {
   margin-bottom: 4rem;
@@ -326,6 +362,11 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  footer {
+    padding: 5rem 1.5rem;
+  }
 }
 footer h2 {
   margin-bottom: 3rem;
@@ -353,6 +394,11 @@ footer form input {
 }
 footer form input::placeholder {
   color: var(--text);
+}
+@media only screen and (max-width: 767px) {
+  footer form input {
+    min-width: 200px;
+  }
 }
 footer form button {
   background: var(--text);
