@@ -1,7 +1,7 @@
 # 🎓 Clara Moreau – Fake Resume
-
 > *This project is part of a certification training in HTML, CSS, and Sass from Dyma. It simulates a complete resume website using semantic HTML5, modular SCSS, and modern development workflow tools like Node.js and npm.*
 
+![Resume Preview](./img/preview%20CV%20Curriculum%20Vitae.png)
 ---
 
 ## 📌 Project Overview
